@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Pekerja</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+<br>
+  <main class="registration">
+    <h1>Form Pendaftaran Pekerja</h1>
+
+    <form id="daftarForm">
+      <label>Nama Lengkap</label>
+      <input type="text" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>No HP</label>
+      <input type="tel" required>
+
+      <label>Pilihan Pekerjaan</label>
+      <select required>
+        <option value="">-- Pilih --</option>
+        <option>Asisten Rumah Tangga</option>
+        <option>Baby Sitter</option>
+        <option>Perawat Lansia</option>
+      </select>
+
+      <label>Pengalaman</label>
+      <textarea rows="4"></textarea>
+
+      <button type="submit">Kirim Pendaftaran</button>
+    </form>
+  </main>
+<br>
+  <div id="footer"></div>
+
+  <script src="/assets/js/include.js"></script>
+  <script src="/assets/js/pendaftaran.js"></script>
+</body>
+</html>
