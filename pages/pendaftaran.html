@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pendaftaran Pekerja</title>
+  <meta name="description" content="Bang Fadhil adalah penyalur kerja terpercaya untuk ART, Baby Sitter, dan Perawat Lansia.">
 
+  <title>Pendaftaran Pekerja</title>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    /* Preview nama file */
+    #daftarForm .file-name {
+      font-size: 0.9rem;
+      color: var(--dark);
+      margin-top: 4px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -16,16 +26,24 @@
 
     <form id="daftarForm">
       <label>Nama Lengkap</label>
-      <input type="text" required>
+      <input type="text" name="Nama" required>
 
       <label>Email</label>
-      <input type="email" required>
+      <input type="email" name="Email" required>
 
       <label>No HP</label>
-      <input type="tel" required>
+      <input 
+        type="tel"
+        name="telepon"
+        inputmode="numeric"
+        pattern="08[0-9]{8,11}"
+        placeholder="Contoh: 081234567890"
+        required
+      >
+      <small class="hint">Gunakan nomor aktif (08xxxxxxxxxx)</small>
 
       <label>Pilihan Pekerjaan</label>
-      <select required>
+      <select name="Pekerjaan" required>
         <option value="">-- Pilih --</option>
         <option>Asisten Rumah Tangga</option>
         <option>Baby Sitter</option>
@@ -33,15 +51,48 @@
       </select>
 
       <label>Pengalaman</label>
-      <textarea rows="4"></textarea>
+      <textarea name="Pengalaman" rows="4"></textarea>
+
+      <label>Lampirkan CV (PDF/Doc)</label>
+      <input type="file" name="cv" id="cvInput" accept=".pdf,.doc,.docx" required>
+      <span class="file-name">Belum ada file dipilih</span>
+      <small class="hint">Ukuran maksimal 2MB</small>
+
+      <label>
+      <input type="checkbox" required>
+      Saya menyatakan data yang diisi benar
+      </label>
 
       <button type="submit">Kirim Pendaftaran</button>
+
+      <p class="disclaimer">
+        *Data yang diisi akan digunakan sebagai data awal pendaftaran.
+        Proses seleksi dilakukan secara manual oleh tim Bang Fadhil.
+      </p>
     </form>
+
+    <div class="form-error" id="formError"></div>
+
   </main>
 <br>
   <div id="footer"></div>
 
   <script src="/assets/js/include.js"></script>
   <script src="/assets/js/pendaftaran.js"></script>
+  <script>
+    // Preview nama file CV
+    const cvInput = document.getElementById('cvInput');
+    const fileNameSpan = cvInput.nextElementSibling;
+
+    cvInput.addEventListener('change', () => {
+      const file = cvInput.files[0];
+      if(file) {
+        fileNameSpan.textContent = file.name;
+      } else {
+        fileNameSpan.textContent = "Belum ada file dipilih";
+      }
+    });
+  </script>
+  
 </body>
 </html>
