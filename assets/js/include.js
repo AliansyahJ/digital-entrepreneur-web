@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const isInPages = location.pathname.includes('/pages/');
+  const isInPages = location.pathname.includes('pages/');
   const basePath = isInPages ? '../' : '';
 
   loadPartial('header', `${basePath}partial/header.html`, initNavbarBehavior);
