@@ -79,20 +79,6 @@
 
   <script src="../assets/js/include.js"></script>
   <script src="/digital-entrepreneur-web/assets/js/pendaftaran.js"></script>
-  <script>
-    // Preview nama file CV
-    const cvInput = document.getElementById('cvInput');
-    const fileNameSpan = cvInput.nextElementSibling;
-
-    cvInput.addEventListener('change', () => {
-      const file = cvInput.files[0];
-      if(file) {
-        fileNameSpan.textContent = file.name;
-      } else {
-        fileNameSpan.textContent = "Belum ada file dipilih";
-      }
-    });
-  </script>
   
 </body>
 </html>
