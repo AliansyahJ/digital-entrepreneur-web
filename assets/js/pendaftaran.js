@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // simulasi proses kirim
     setTimeout(() => {
-      window.location.href = 'pages/daftar-berhasil.html';
+      window.location.href = '../pages/daftar-berhasil.html';
     }, 500);
   });
   const errorBox = document.getElementById('formError');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    window.location.href = 'pages/daftar-berhasil.html';
+    window.location.href = '../pages/daftar-berhasil.html';
   });
 
 });
