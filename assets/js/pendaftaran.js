@@ -16,5 +16,5 @@ form.addEventListener('submit', e => {
   }
 
   // redirect ke halaman berhasil
-  window.location.href = '../pages/daftar-berhasil.html';
+  window.location.href = '/digital-entrepreneur-web/pages/daftar-berhasil.html';
 });
