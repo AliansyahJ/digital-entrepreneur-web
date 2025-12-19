@@ -578,3 +578,39 @@ RESPONSIVE
   transform: translateY(0);
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
+
+.cta-sub {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 40px;
+}
+
+.cta-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.cta-point {
+  text-align: left;
+}
+
+.cta-point strong {
+  display: block;
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.cta-point span {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.cta-note {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
